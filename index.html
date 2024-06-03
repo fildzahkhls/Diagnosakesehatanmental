@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- font poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <title>Sistem Pakar| Kelompok 4</title>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="container">
+                <div class="box-navbar">
+                    <div class="logo">
+                        <h1>Kelompok 4</h1>
+                    </div>
+                    <ul class="menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#anggota">Anggota</a></li>
+                        <li><a href="#edukasi">Edukasi</a></li>
+                    </ul>
+                    <i class="fa-solid fa-bars menu-bar"></i>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar -->
+
+        <!-- hero -->
+        <div class="hero" id="home">
+            <div class="container">
+                <div class="box-hero">
+                    <div class="box">
+                        <h2>Sistem Pakar</h2>
+                        <h1>Diagnosa <br> Kesehatan Mental</h1>
+                        <p>Apakah anda memiliki keluhan?</p>
+                        <button id="myBtn" >Diagnosa </button>
+
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                
+                                <div class="user-content">
+                                    <div class="user-box">
+
+                                        <div class="judul">Diagnosa Kesehatan Mental</div>
+            
+                                        <div id="pertanyaan-1">
+                                            <p>merasa gelisah, susah tidur, pikirannya kacau dan merasa  takut </p>
+                                            <button id="yes-button-1" onclick="tombolClick('yes', 1)">Ya</button>
+                                            <button id="no-button-1" onclick="tombolClick('no', 1)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-2" style="display: none;">
+                                            <p>Apakah anda sadar dengan itu?</p>
+                                            <button id="sadar-button" onclick="tombolClick('sadar', 2)">Dibawah kendali <br> kesadaran</button>
+                                            <button id="tidak-button" onclick="tombolClick('tidak', 2)">Tidak dibawah kendali kesadaran</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-3-1" style="display: none;">
+                                            <p>Pilih gangguan yang anda alami </p>
+                                            <button id="berbicara-button" onclick="tombolClick('berbicara', 3.1)">Sulit  untuk <br> berbicara</button>
+                                            <button id="lupaingatan-button" onclick="tombolClick('lupaingatan', 3.1)">Tidak mengenal dimana anda tinggal sekarang </button>
+                                            <button id="pelupa-button" onclick="tombolClick('pelupa', 3.1)">Terganggu  daya <br> ingatnya </button>
+                                        </div>
+            
+                                        <div id="pertanyaan-3-11" style="display: none;">
+                                            <p>Mengkonsumsi obat </p>
+                                            <button id="one-button-1" onclick="tombolClick('one', 3.111)">Ya</button>
+                                            <button id="two-button-1" onclick="tombolClick('two', 3.111)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-3-12" style="display: none;">
+                                            <p>Tidak mampu membayangkan masa depan </p>
+                                            <button id="thre-button-1" onclick="tombolClick('thre', 3.112)">Ya</button>
+                                            <button id="four-button-1" onclick="tombolClick('four', 3.112)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-3-13" style="display: none;">
+                                            <p> Tidak mampu mengenali hal-hal yang baru </p>
+                                            <button id="five-button-1" onclick="tombolClick('five', 3.113)">Ya</button>
+                                            <button id="six-button-1" onclick="tombolClick('six', 3.113)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-3-14" style="display: none;">
+                                            <p> Mengalami hambatan pada pekerjaan </p>
+                                            <button id="yes314-button-1" onclick="tombolClick('yes314', 3.114)">Ya</button>
+                                            <button id="no314-button-1" onclick="tombolClick('no314', 3.114)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-3-121" style="display: none;">
+                                            <p> Percaya terhadap hal-hal yang aneh </p>
+                                            <button id="q-button-1" onclick="tombolClick('q', 3.121)">Ya</button>
+                                            <button id="q-button-1" onclick="tombolClick('q', 3.121)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-3-122" style="display: none;">
+                                            <p> Suka berhalusinasi </p>
+                                            <button id="w-button-1" onclick="tombolClick('w', 3.122)">Ya</button>
+                                            <button id="w-button-1" onclick="tombolClick('w', 3.122)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-3-123" style="display: none;">
+                                            <p> Mudah tersinggung </p>
+                                            <button id="e-button-1" onclick="tombolClick('e', 3.123)">Ya</button>
+                                            <button id="e-button-1" onclick="tombolClick('e', 3.123)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-3-131" style="display: none;">
+                                            <p> Lupa dengan identitas diri </p>
+                                            <button id="r-button-1" onclick="tombolClick('r', 3.131)">Ya</button>
+                                            <button id="r-button-1" onclick="tombolClick('r', 3.131)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-3-132" style="display: none;">
+                                            <p> Susah berkonsentrasi </p>
+                                            <button id="t-button-1" onclick="tombolClick('t', 3.132)">Ya</button>
+                                            <button id="t-button-1" onclick="tombolClick('t', 3.132)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-3-133" style="display: none;">
+                                            <p> Sering berilusinasi </p>
+                                            <button id="y-button-1" onclick="tombolClick('y', 3.133)">Ya</button>
+                                            <button id="y-button-1" onclick="tombolClick('y', 3.133)">Tidak</button>
+                                        </div>
+            
+            
+                                        <div id="pertanyaan-3-2" style="display: none;">
+                                            <p>Pilih gangguan yang anda alami </p>
+                                            <div class="baris1"><button id="berguna-button" onclick="tombolClick('berguna', 3.2)">Merasa tidak berguna </button>
+                                                <button id="marah-button" onclick="tombolClick('marah', 3.2)">Mudah marah </button>
+                                                <button id="mual-button" onclick="tombolClick('mual', 3.2)">Merasa mual </button>
+                                            </div>
+                                            <div class="baris2"><button id="cemas-button" onclick="tombolClick('cemas', 3.2)">Merasa cemas <br>-</button>
+                                                <button id="kencing-button" onclick="tombolClick('kencing', 3.2)">Sering kencing <br>-</button>
+                                                <button id="perasaan-button" onclick="tombolClick('perasaan', 3.2)">Ada perubahan suasana perasaan </button>
+                                            </div>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-111" style="display: none;">
+                                            <p> Merasa Harga dirinya rendah </p>
+                                            <button id="u-button-1" onclick="tombolClick('u', 4.111)">Ya</button>
+                                            <button id="u-button-1" onclick="tombolClick('u', 4.111)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-112" style="display: none;">
+                                            <p> Pernah berfikiran untuk mengakhiri hidup </p>
+                                            <button id="i-button-1" onclick="tombolClick('i', 4.112)">Ya</button>
+                                            <button id="i-button-1" onclick="tombolClick('i', 4.112)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-113" style="display: none;">
+                                            <p> Mengalami perasaan tidak nyata </p>
+                                            <button id="o-button-1" onclick="tombolClick('o', 4.113)">Ya</button>
+                                            <button id="o-button-1" onclick="tombolClick('o', 4.113)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-114" style="display: none;">
+                                            <p> Sering mengalami sakit kepala </p>
+                                            <button id="p-button-1" onclick="tombolClick('p', 4.114)">Ya</button>
+                                            <button id="p-button-1" onclick="tombolClick('p', 4.114)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-121" style="display: none;">
+                                            <p> Sulit untuk berteman </p>
+                                            <button id="a-button-1" onclick="tombolClick('a', 4.121)">Ya</button>
+                                            <button id="a-button-1" onclick="tombolClick('a', 4.121)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-122" style="display: none;">
+                                            <p> Selalu curiga terhadap orang lain </p>
+                                            <button id="s-button-1" onclick="tombolClick('s', 4.122)">Ya</button>
+                                            <button id="s-button-1" onclick="tombolClick('s', 4.122)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-123" style="display: none;">
+                                            <p> Muntah </p>
+                                            <button id="d-button-1" onclick="tombolClick('d', 4.123)">Ya</button>
+                                            <button id="d-button-1" onclick="tombolClick('d', 4.123)">Tidak</button>
+                                        </div>
+                                        <div id="pertanyaan-4-131" style="display: none;">
+                                            <p> Sulit untuk berteman </p>
+                                            <button id="f-button-1" onclick="tombolClick('f', 4.131)">Ya</button>
+                                            <button id="f-button-1" onclick="tombolClick('f', 4.131)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-132" style="display: none;">
+                                            <p> Kembung </p>
+                                            <button id="g-button-1" onclick="tombolClick('g', 4.132)">Ya</button>
+                                            <button id="g-button-1" onclick="tombolClick('g', 4.132)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-133" style="display: none;">
+                                            <p> Terasa pandangannya ganda </p>
+                                            <button id="h-button-1" onclick="tombolClick('h', 4.133)">Ya</button>
+                                            <button id="h-button-1" onclick="tombolClick('h', 4.133)">Tidak</button>
+                                        </div>
+                                        <div id="pertanyaan-4-141" style="display: none;">
+                                            <p> Mudah tersinggung </p>
+                                            <button id="j-button-1" onclick="tombolClick('j', 4.141)">Ya</button>
+                                            <button id="j-button-1" onclick="tombolClick('j', 4.141)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-142" style="display: none;">
+                                            <p> Merasa sakit nyeri pada tubuhnya </p>
+                                            <button id="k-button-1" onclick="tombolClick('k', 4.142)">Ya</button>
+                                            <button id="k-button-1" onclick="tombolClick('k', 4.142)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-143" style="display: none;">
+                                            <p> Persepsinya berlebihan pada suatu bagian tubuhnya </p>
+                                            <button id="l-button-1" onclick="tombolClick('l', 4.143)">Ya</button>
+                                            <button id="l-button-1" onclick="tombolClick('l', 4.143)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-151" style="display: none;">
+                                            <p> Sulit kencing </p>
+                                            <button id="z-button-1" onclick="tombolClick('z', 4.151)">Ya</button>
+                                            <button id="z-button-1" onclick="tombolClick('z', 4.151)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-152" style="display: none;">
+                                            <p> Sesak nafas </p>
+                                            <button id="x-button-1" onclick="tombolClick('x', 4.152)">Ya</button>
+                                            <button id="x-button-1" onclick="tombolClick('x', 4.152)">Tidak</button>
+                                        </div>
+                                        <div id="pertanyaan-4-153" style="display: none;">
+                                            <p> Keringat dingin </p>
+                                            <button id="c-button-1" onclick="tombolClick('c', 4.153)">Ya</button>
+                                            <button id="c-button-1" onclick="tombolClick('c', 4.153)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-4-161" style="display: none;">
+                                            <p>Ada perubahan suasana perasaan. </p>
+                                            <button id="dsa-button-1" onclick="tombolClick('dsa', 4.16)">Merasa cepat <br> lelah </button>
+                                            <button id="asd-button-1" onclick="tombolClick('asd', 4.16)">Tidak mampu menampakan emosinya</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-5-11" style="display: none;">
+                                            <p>Suka menyendiri </p>
+                                            <button id="qw-button-1" onclick="tombolClick('qw', 5.11)">Ya</button>
+                                            <button id="qw-button-1" onclick="tombolClick('qw', 5.11)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-5-12" style="display: none;">
+                                            <p>Tidak mampu membayangkan masa depan </p>
+                                            <button id="er-button-1" onclick="tombolClick('er', 5.12)">Ya</button>
+                                            <button id="er-button-1" onclick="tombolClick('er', 5.12)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-5-13" style="display: none;">
+                                            <p> Tidak mampu mengenali hal-hal yang baru </p>
+                                            <button id="ty-button-1" onclick="tombolClick('ty', 5.13)">Ya</button>
+                                            <button id="ty-button-1" onclick="tombolClick('ty', 5.13)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-5-14" style="display: none;">
+                                            <p> Mengalami hambatan pada pekerjaan </p>
+                                            <button id="ui-button-1" onclick="tombolClick('ui', 5.14)">Ya</button>
+                                            <button id="ui-button-1" onclick="tombolClick('ui', 5.14)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-5-21" style="display: none;">
+                                            <p>Kurang dalam dorongan beraktivitas </p>
+                                            <button id="as-button-1" onclick="tombolClick('as', 5.21)">Ya</button>
+                                            <button id="as-button-1" onclick="tombolClick('as', 5.21)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-5-22" style="display: none;">
+                                            <p>Kurang mampu berbicara </p>
+                                            <button id="df-button-1" onclick="tombolClick('df', 5.22)">Ya</button>
+                                            <button id="df-button-1" onclick="tombolClick('df', 5.22)">Tidak</button>
+                                        </div>
+            
+                                        <div id="pertanyaan-5-23" style="display: none;">
+                                            <p> Tidak dapat menikmati kegiatan yang disenanginya </p>
+                                            <button id="gh-button-1" onclick="tombolClick('gh', 5.23)">Ya</button>
+                                            <button id="gh-button-1" onclick="tombolClick('gh', 5.23)">Tidak</button>
+                                        </div>
+            
+                                        <div id="hasil" style="display: none;">
+                                            <p id="output"> </p>
+                                        </div>
+                                        <script>
+                                            // Get the modal
+                                            var modal = document.getElementById("myModal");
+                                            
+                                            // Get the button that opens the modal
+                                            var btn = document.getElementById("myBtn");
+                                            
+                                            // Get the <span> element that closes the modal
+                                            var span = document.getElementsByClassName("close");
+                                            
+                                            // When the user clicks the button, open the modal 
+                                            btn.onclick = function() {
+                                                modal.style.display = "block";
+                                            }
+                                            
+                                            // When the user clicks on <span> (x), close the modal
+                                            span.onclick = function() {
+                                                    modal.style.display = "none";
+                                            }
+                                            
+                                            // When the user clicks anywhere outside of the modal, close it
+                                            window.onclick = function(event) {
+                                                if (event.target == modal) {
+                                                modal.style.display = "none";
+                                                }
+                                            }
+        
+                                            function tombolClick(pilihan, langkah) {
+                                                if (langkah === 1) {
+                                                    if (pilihan === 'yes') {
+                                                        document.getElementById('pertanyaan-1').style.display = 'none';
+                                                        document.getElementById('pertanyaan-2').style.display = 'block';
+                                                    } else if (pilihan === 'no') {
+                                                        document.getElementById('pertanyaan-1').style.display = 'none';
+                                                        document.getElementById('hasil').style.display = 'block';
+                                                        document.getElementById('output').innerText = 'Anda sehat';
+                                                    }
+                                                } else if (langkah === 2) {
+                                                    if (pilihan === 'sadar') {
+                                                        document.getElementById('pertanyaan-2').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-1').style.display = 'block';
+                                                    } else if (pilihan === 'tidak') {
+                                                        document.getElementById('pertanyaan-2').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-2').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 3.1) {
+                                                    if (pilihan === 'berbicara') {
+                                                        document.getElementById('pertanyaan-3-1').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-11').style.display = 'block';
+                                                    } else if (pilihan === 'lupaingatan') {
+                                                        document.getElementById('pertanyaan-3-1').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-121').style.display = 'block';
+                                                    } else if (pilihan === 'pelupa') {
+                                                        document.getElementById('pertanyaan-3-1').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-131').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 3.2) {
+                                                    if (pilihan === 'berguna') {
+                                                        document.getElementById('pertanyaan-3-2').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-111').style.display = 'block';
+                                                    } else if (pilihan === 'marah') {
+                                                        document.getElementById('pertanyaan-3-2').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-122').style.display = 'block';
+                                                    } else if (pilihan === 'mual') {
+                                                        document.getElementById('pertanyaan-3-2').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-131').style.display = 'block';
+                                                    } else if (pilihan === 'cemas') {
+                                                        document.getElementById('pertanyaan-3-2').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-141').style.display = 'block';
+                                                    } else if (pilihan === 'kencing') {
+                                                        document.getElementById('pertanyaan-3-2').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-151').style.display = 'block';
+                                                    } else if (pilihan === 'perasaan') {
+                                                        document.getElementById('pertanyaan-3-2').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-161').style.display = 'block';
+                                                    }
+            
+                                                } else if (langkah === 3.111) {
+                                                    if (pilihan === 'one') {
+                                                        document.getElementById('pertanyaan-3-11').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-12').style.display = 'block';
+                                                    } else if (pilihan === 'two') {
+                                                        document.getElementById('pertanyaan-3-11').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-12').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 3.112) {
+                                                    if (pilihan === 'thre') {
+                                                        document.getElementById('pertanyaan-3-12').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-13').style.display = 'block';
+                                                    } else if (pilihan === 'four') {
+                                                        document.getElementById('pertanyaan-3-12').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-13').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 3.113) {
+                                                    if (pilihan === 'five') {
+                                                        document.getElementById('pertanyaan-3-13').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-14').style.display = 'block';
+                                                    } else if (pilihan === 'six') {
+                                                        document.getElementById('pertanyaan-3-13').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-14').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 3.114) {
+                                                    if (pilihan === 'yes314') {
+                                                        document.getElementById('pertanyaan-3-14').style.display = 'none';
+                                                        document.getElementById('hasil').style.display = 'block';
+                                                        var outputElement = document.getElementById('output');
+                                                        outputElement.innerHTML = 'Gangguan kesehatan mental Amnestik   <br> <br> <p>Amnesia (Sindrom Amnestik) atau hilang ingatan adalah gangguan yang menyebabkan seseorang tidak bisa mengingat fakta, informasi, atau kejadian yang pernah dialaminya. Meski bersifat ringan, gangguan daya ingat akibat amnesia juga bisa mengganggu kehidupan penderitanya.  </p>';
+                                            
+                                                    } else if (pilihan === 'no3113') {
+                                                        document.getElementById('pertanyaan-3-14').style.display = 'none';
+                                                        document.getElementById('hasil').style.display = 'block';
+                                                        var outputElement = document.getElementById('output');
+                                                        outputElement.innerHTML = 'Gangguan kesehatan mental Amnestik   <br> <br> <p>Amnesia (Sindrom Amnestik) atau hilang ingatan adalah gangguan yang menyebabkan seseorang tidak bisa mengingat fakta, informasi, atau kejadian yang pernah dialaminya. Meski bersifat ringan, gangguan daya ingat akibat amnesia juga bisa mengganggu kehidupan penderitanya.  </p>';
+                                            
+                                                    }
+                                                } else if (langkah === 3.121) {
+                                                    if (pilihan === 'q') {
+                                                        document.getElementById('pertanyaan-3-121').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-122').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 3.122) {
+                                                    if (pilihan === 'w') {
+                                                        document.getElementById('pertanyaan-3-122').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-123').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 3.123) {
+                                                    if (pilihan === 'e') {
+                                                        document.getElementById('pertanyaan-3-123').style.display = 'none';
+                                                        document.getElementById('hasil').style.display = 'block';
+                                                        var outputElement = document.getElementById('output');
+                                                        outputElement.innerHTML = 'Gangguan kesehatan mental Demensia  <br> <br>  <p>Demensia adalah penyakit yang menyebabkan penurunan daya ingat dan cara berpikir. Kondisi ini berdampak pada gaya hidup, kemampuan bersosialisasi, hingga aktivitas sehari-hari penderitanya.</p>';
+                                            
+                                                        
+                                                    }
+                                                } else if (langkah === 3.131) {
+                                                    if (pilihan === 'r') {
+                                                        document.getElementById('pertanyaan-3-131').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-132').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 3.132) {
+                                                    if (pilihan === 't') {
+                                                        document.getElementById('pertanyaan-3-132').style.display = 'none';
+                                                        document.getElementById('pertanyaan-3-133').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 3.133) {
+                                                    if (pilihan === 'y') {
+                                                        document.getElementById('pertanyaan-3-133').style.display = 'none';
+                                                        document.getElementById('hasil').style.display = 'block';
+                                                        var outputElement = document.getElementById('output');
+                                                        outputElement.innerHTML = 'Gangguan kesehatan mental Delirium  <br> <br> <p>Delirium adalah kebingungan atau linglung parah yang menyebabkan penderitanya sulit fokus dan berpikir. Pasien delirium juga kerap gelisah dan sulit mengenal orang di sekitarnya, waktu, tanggal, atau lokasi di tempat ia berada. Delirium umumnya terjadi karena adanya gangguan pada otak.</p>';
+                                            
+                                                    }
+                                                } else if (langkah === 4.111) {
+                                                    if (pilihan === 'u') {
+                                                        document.getElementById('pertanyaan-4-111').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-112').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 4.112) {
+                                                    if (pilihan === 'i') {
+                                                        document.getElementById('pertanyaan-4-112').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-113').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 4.113) {
+                                                    if (pilihan === 'o') {
+                                                        document.getElementById('pertanyaan-4-113').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-114').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 4.114) {
+                                                    if (pilihan === 'p') {
+                                                        document.getElementById('pertanyaan-4-114').style.display = 'none';
+                                                        document.getElementById('hasil').style.display = 'block';
+                                                    
+                                                        var outputElement = document.getElementById('output');
+                                                        outputElement.innerHTML = 'Gangguan kesehatan mental Disosiatif   <br> <br>   <p>Kepribadian ganda adalah kondisi ketika seseorang memiliki dua atau lebih kepribadian yang berbeda. Kepribadian ganda disebut juga gangguan identitas disosiatif. Kondisi ini umumnya disebabkan oleh pengalaman traumatis yang terjadi berulang di masa kanak-kanak.</p>';
+                                            
+                                                    }
+                                                } else if (langkah === 4.121) {
+                                                    if (pilihan === 'a') {
+                                                        document.getElementById('pertanyaan-4-121').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-122').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 4.122) {
+                                                    if (pilihan === 's') {
+                                                        document.getElementById('pertanyaan-4-122').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-123').style.display = 'block';
+                                                    }
+            
+                                                } else if (langkah === 4.123) {
+                                                    if (pilihan === 'd') {
+                                                        document.getElementById('pertanyaan-4-123').style.display = 'none';
+                                                        document.getElementById('hasil').style.display = 'block';
+                                                        var outputElement = document.getElementById('output');
+                                                        outputElement.innerHTML = 'Gangguan kesehatan mental Neurosis Depresif   <br> <br> <p>Kepribadian neurotik adalah suatu kondisi kepribadian yang cenderung dilikupi dengan pikiran ynag negatif dan obsesif sehingga bisa membuat orang tersebut kesulitan dalam menghadapi keseharian.</p>';
+                                                        
+                                                    }
+                                                } else if (langkah === 4.131) {
+                                                    if (pilihan === 'f') {
+                                                        document.getElementById('pertanyaan-4-131').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-132').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 4.132) {
+                                                    if (pilihan === 'g') {
+                                                        document.getElementById('pertanyaan-4-132').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-133').style.display = 'block';
+                                                    }
+            
+                                                } else if (langkah === 4.133) {
+                                                    if (pilihan === 'h') {
+                                                        document.getElementById('pertanyaan-4-133').style.display = 'none';
+                                                        document.getElementById('hasil').style.display = 'block';
+                                                        var outputElement = document.getElementById('output');
+                                                        outputElement.innerHTML = 'Gangguan kesehatan mental Kepribadian    <br> <br> <p>Kepribadian ganda adalah kondisi ketika seseorang memiliki dua atau lebih kepribadian yang berbeda. Kepribadian ganda disebut juga gangguan identitas disosiatif. Kondisi ini umumnya disebabkan oleh pengalaman traumatis yang terjadi berulang di masa kanak-kanak.</p>';
+                                                        
+                                                    }
+                                                } else if (langkah === 4.141) {
+                                                    if (pilihan === 'j') {
+                                                        document.getElementById('pertanyaan-4-141').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-142').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 4.142) {
+                                                    if (pilihan === 'k') {
+                                                        document.getElementById('pertanyaan-4-142').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-143').style.display = 'block';
+                                                    }
+            
+                                                } else if (langkah === 4.143) {
+                                                    if (pilihan === 'l') {
+                                                        document.getElementById('pertanyaan-4-143').style.display = 'none';
+                                                        document.getElementById('hasil').style.display = 'block';
+                                                        var outputElement = document.getElementById('output');
+                                                        outputElement.innerHTML = 'Gangguan kesehatan mental Somatoform  <br> <br> <p>Gangguan somatoform merupakan kelainan psikologis pada seseorang yang ditandai dengan sekumpulan keluhan fisik yang tidak menentu, namun tidak tampak saat pemeriksaan fisik. Munculnya gangguan ini biasanya disebabkan oleh stres dan banyak pikiran.</p>';
+                                                        
+                                                    }
+                                                } else if (langkah === 4.151) {
+                                                    if (pilihan === 'z') {
+                                                        document.getElementById('pertanyaan-4-151').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-152').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 4.152) {
+                                                    if (pilihan === 'x') {
+                                                        document.getElementById('pertanyaan-4-152').style.display = 'none';
+                                                        document.getElementById('pertanyaan-4-153').style.display = 'block';
+                                                    }
+            
+                                                } else if (langkah === 4.153) {
+                                                    if (pilihan === 'c') {
+                                                        document.getElementById('pertanyaan-4-153').style.display = 'none';
+                                                        document.getElementById('hasil').style.display = 'block';
+                                                        var outputElement = document.getElementById('output');
+                                                        outputElement.innerHTML = 'Gangguan kesehatan mental Cemas Menyeluruh  <br> <br>                 <p>Amnesia (Sindrom Amnestik) atau hilang ingatan adalah gangguan yang menyebabkan seseorang tidak bisa mengingat fakta, informasi, atau kejadian yang pernah dialaminya. Meski bersifat ringan, gangguan daya ingat akibat amnesia juga bisa mengganggu kehidupan penderitanya.  </p>';
+                                                        
+                                                    }
+                                                } else if (langkah === 4.16) {
+                                                    if (pilihan === 'dsa') {
+                                                        document.getElementById('pertanyaan-4-161').style.display = 'none';
+                                                        document.getElementById('pertanyaan-5-11').style.display = 'block';
+                                                    } else if (pilihan === 'asd') {
+                                                        document.getElementById('pertanyaan-4-161').style.display = 'none';
+                                                        document.getElementById('pertanyaan-5-21').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 5.11) {
+                                                    if (pilihan === 'qw') {
+                                                        document.getElementById('pertanyaan-5-11').style.display = 'none';
+                                                        document.getElementById('pertanyaan-5-12').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 5.12) {
+                                                    if (pilihan === 'er') {
+                                                        document.getElementById('pertanyaan-5-12').style.display = 'none';
+                                                        document.getElementById('pertanyaan-5-13').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 5.13) {
+                                                    if (pilihan === 'ty') {
+                                                        document.getElementById('pertanyaan-5-13').style.display = 'none';
+                                                        document.getElementById('pertanyaan-5-14').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 5.14) {
+                                                    if (pilihan === 'ui') {
+                                                        document.getElementById('pertanyaan-5-14').style.display = 'none';
+                                                        document.getElementById('hasil').style.display = 'block';
+                                                        var outputElement = document.getElementById('output');
+                                                        outputElement.innerHTML = 'Gangguan kesehatan mental Afektif  <br> <br> <p> Gangguan afektif atau bipolar adalah gangguan mental yang ditandai dengan perubahan drastis pada suasana hati. Penderita gangguan ini bisa merasa sangat gembira atau euforia, kemudian berubah menjadi sangat sedih.</p>';
+                                                    }
+                                                } else if (langkah === 5.21) {
+                                                    if (pilihan === 'as') {
+                                                        document.getElementById('pertanyaan-5-21').style.display = 'none';
+                                                        document.getElementById('pertanyaan-5-22').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 5.22) {
+                                                    if (pilihan === 'df') {
+                                                        document.getElementById('pertanyaan-5-22').style.display = 'none';
+                                                        document.getElementById('pertanyaan-5-23').style.display = 'block';
+                                                    }
+                                                } else if (langkah === 5.23) {
+                                                    if (pilihan === 'gh') {
+                                                        document.getElementById('pertanyaan-5-23').style.display = 'none';
+                                                        document.getElementById('hasil').style.display = 'block';
+                                                        var outputElement = document.getElementById('output');
+                                                        outputElement.innerHTML = 'Gangguan kesehatan mental Skizofrenia  <br> <br> <p>Skizofrenia adalah gangguan  mental berat yang dapat memengaruhi tingkah laku, emosi, dan komunikasi. <br> Penderita skizofrenia bisa mengalami halusinasi, delusi, kekacauan berpikir, dan perubahan perilaku.</p>';
+                                                    }
+                                                }
+            
+            
+            
+            
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+    
+                            </div>
+                        
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- hero -->
+    </header>
+
+    <!-- Anggota -->
+    <div class="services" id="anggota">
+        <div class="container">
+            <div>
+                <h3 class="title" >Anggota Kelompok</h3>
+            </div>
+            <div class="box-services">
+                <div class="box">
+                    <img src="images/ilmi.jpg" alt="">
+                    <h4>E1E121008</h4>
+                    <p>Nur Ilmi Fadhilah</p>
+                </div>
+                <div class="box">
+                    <img src="images/fildzah.jpg" alt="">
+                    <h4>E1E121026</h4>
+                    <p>Fildzah Khalishah Ghassani</p>
+                </div>
+                <div class="box">
+                    <img src="images/nirwana.jpg" alt="">
+                    <h4>E1E121036</h4>
+                    <p>Nirwana</p>
+                </div>
+                <div class="box">
+                    <img src="images/azriel.jpg" alt="">
+                    <h4>E1E121074</h4>
+                    <p>Muhammad Azriel Saktiawan</p>
+                </div>
+                <div class="box">
+                    <img src="images/luthfi.jpg" alt="">
+                    <h4>E1E121078</h4>
+                    <p>Muhammad Luthfi Azhari</p>
+                </div>
+            </div>
+            <div id="lightbox" class="lightbox">
+                <span class="close-buttonkku" onclick="closeLightbox()">&times;</span>
+                <img class="lightbox-content" id="zoomed-img">
+            </div>
+        </div>
+        <script>
+            function openLightbox(imgSrc) {
+                var lightbox = document.getElementById("lightbox");
+                var zoomedImg = document.getElementById("zoomed-img");
+        
+                zoomedImg.src = imgSrc;
+                lightbox.style.display = "block";
+                }
+        
+                function closeLightbox() {
+                document.getElementById("lightbox").style.display = "none";
+                }
+                
+                var images = document.querySelectorAll(".box img");
+                images.forEach(function(image) {
+                image.addEventListener("click", function() {
+                    openLightbox(image.src);
+                });
+                });
+        
+        </script>
+    </div>
+    <!-- Anggota -->
+
+
+
+    <!-- Edukasi -->
+    <div class="edukasi" id="edukasi">
+        <div class="container">
+            
+            <h3 class="title"> gangguan kesehatan mental </h3>
+            
+            <div class="products-container">
+            
+                <div class="product" data-name="p-1">
+                    <img src="images/diliriumm.jpg" alt="">
+                    <h3>Gangguan kesehatan mental Delirium</h3> 
+                </div>
+            
+                <div class="product" data-name="p-2">
+                    <img src="images/dimensia.png" alt="">
+                    <h3>Gangguan kesehatan mental Dimensia</h3>
+                </div>
+            
+                <div class="product" data-name="p-3">
+                    <img src="images/amnesiaa.png" alt="">
+                    <h3>Gangguan kesehatan mental Amenstik</h3>
+                </div>
+            
+                <div class="product" data-name="p-4">
+                    <img src="images/Gad.jpg" alt="">
+                    <h3>Gangguan kesehatan mental Cemas Menyeluruh</h3>
+                </div>
+            
+                <div class="product" data-name="p-5">
+                    <img src="images/somatoform.jpg" alt="">
+                    <h3>Gangguan kesehatan mental Somatoform</h3>
+                </div>
+            
+                <div class="product" data-name="p-6">
+                    <img src="images/kepribadian.jpeg" alt="">
+                    <h3>Gangguan kesehatan mental Kepribadian</h3>
+                </div>
+            
+                <div class="product" data-name="p-7">
+                    <img src="images/neurosis.jpg" alt="">
+                    <h3>Gangguan kesehatan mental Neurosis Depresif</h3>
+                </div>
+            
+                <div class="product" data-name="p-8">
+                    <img src="images/disosiatif.jpg" alt="">
+                    <h3>Gangguan kesehatan mental Disosiatif</h3>
+                </div>
+            
+                <div class="product" data-name="p-9">
+                    <img src="images/skizo.png" alt="">
+                    <h3>Gangguan kesehatan mental Skizofrenia</h3>
+                </div>
+            
+                <div class="product" data-name="p-10">
+                    <img src="images/mood disorder.jpg" alt="">
+                    <h3>Gangguan kesehatan mental Afektif</h3>
+                </div>
+            
+            </div>
+            
+        </div>
+            
+        <div class="products-preview">
+            
+            <div class="preview" data-target="p-1">
+                <i class="fas fa-times"></i>
+                <img src="images/diliriumm.jpg" alt="">
+                <h3>Gangguan kesehatan mental Delirium</h3>
+                <p>Delirium adalah kebingungan atau linglung parah yang menyebabkan penderitanya sulit fokus dan berpikir. Pasien delirium juga kerap gelisah dan sulit mengenal orang di sekitarnya, waktu, tanggal, atau lokasi di tempat ia berada. Delirium umumnya terjadi karena adanya gangguan pada otak.</p>
+                <div class="buttons">
+                    <a href="https://www.alodokter.com/delirium" class="buy">Informasi Lebih Lanjut</a>
+                </div>
+            </div>
+            
+            <div class="preview" data-target="p-2">
+                <i class="fas fa-times"></i>
+                <img src="images/dimensia.png" alt="">
+                <h3>Gangguan kesehatan mental Dimensia</h3>
+                <p>Demensia adalah penyakit yang menyebabkan penurunan daya ingat dan cara berpikir. Kondisi ini berdampak pada gaya hidup, kemampuan bersosialisasi, hingga aktivitas sehari-hari penderitanya.</p>
+                <div class="buttons">
+                    <a href="https://www.alodokter.com/demensia" class="buy">Informasi Lebih Lanjut</a>
+                </div>
+            </div>
+            
+            <div class="preview" data-target="p-3">
+                <i class="fas fa-times"></i>
+                <img src="images/amnesiaa.png" alt="">
+                <h3>Gangguan kesehatan mental Amnestik</h3>
+                <p>Amnesia (Sindrom Amnestik) atau hilang ingatan adalah gangguan yang menyebabkan seseorang tidak bisa mengingat fakta, informasi, atau kejadian yang pernah dialaminya. Meski bersifat ringan, gangguan daya ingat akibat amnesia juga bisa mengganggu kehidupan penderitanya.  </p>
+                <div class="buttons">
+                    <a href="https://www.alodokter.com/amnesia" class="buy">Informasi Lebih Lanjut</a>
+                </div>
+            </div>
+            
+            <div class="preview" data-target="p-4">
+                <i class="fas fa-times"></i>
+                <img src="images/Gad.jpg" alt="">
+                <h3>Gangguan kesehatan mental Cemas Menyeluruh</h3>
+                <p>Merasa cemas merupakan hal normal. Namun, rasa cemas yang muncul secara sering atau berlebihan bisa jadi tanda gangguan kecemasan. Kondisi ini dapat mengganggu kualitas hidup penderitanya. Oleh karena itu, penting untuk mengetahui jenis, gejala, dan cara mengatasi gangguan kecemasan.</p>
+                <div class="buttons">
+                    <a href="https://www.alodokter.com/kenali-tiga-jenis-gangguan-kecemasan-dan-gejalanya" class="buy">Informasi Lebih Lanjut</a>
+                </div>
+            </div>
+            
+            <div class="preview" data-target="p-5">
+                <i class="fas fa-times"></i>
+                <img src="images/somatoform.jpg" alt="">
+                <h3>Gangguan kesehatan mental Somatoform</h3>
+                <p>Gangguan somatoform merupakan kelainan psikologis pada seseorang yang ditandai dengan sekumpulan keluhan fisik yang tidak menentu, namun tidak tampak saat pemeriksaan fisik. Munculnya gangguan ini biasanya disebabkan oleh stres dan banyak pikiran.</p>
+                <div class="buttons">
+                    <a href="https://www.alodokter.com/gangguan-somatoform-sakit-karena-stres" class="buy">Informasi Lebih Lanjut</a>
+                </div>
+            </div>
+            
+            <div class="preview" data-target="p-6">
+                <i class="fas fa-times"></i>
+                <img src="images/kepribadian.jpeg" alt="">
+                <h3>Gangguan kesehatan mental Kepribadian</h3>
+                <p>Gangguan kepribadian adalah gangguan mental dengan ciri-ciri pola pikir dan perilaku yang tidak normal serta sulit untuk diubah. Penderita gangguan kepribadian juga mengalami kesulitan untuk memahami situasi dan orang lain. </p>
+                <div class="buttons">
+                    <a href="https://www.alodokter.com/gangguan-kepribadian" class="buy">Informasi Lebih Lanjut</a>
+                </div>
+            </div>
+            
+            <div class="preview" data-target="p-7">
+                <i class="fas fa-times"></i>
+                <img src="images/neurosis.jpg"  alt="">
+                <h3>Gangguan kesehatan mental Neurosis Depresif</h3>
+                <p>Kepribadian neurotik adalah suatu kondisi kepribadian yang cenderung dilikupi dengan pikiran ynag negatif dan obsesif sehingga bisa membuat orang tersebut kesulitan dalam menghadapi keseharian.</p>
+                <div class="buttons">
+                    <a href="https://health.detik.com/penyakit/d-1157359/gangguan-neurosis-depresi" class="buy">Informasi Lebih Lanjut</a>
+                </div>
+            </div>
+            
+            <div class="preview" data-target="p-8">
+                <i class="fas fa-times"></i>
+                <img src="images/disosiatif.jpg" alt="">
+                <h3>Gangguan kesehatan mental Disosiatif</h3>
+                <p>Kepribadian ganda adalah kondisi ketika seseorang memiliki dua atau lebih kepribadian yang berbeda. Kepribadian ganda disebut juga gangguan identitas disosiatif. Kondisi ini umumnya disebabkan oleh pengalaman traumatis yang terjadi berulang di masa kanak-kanak.</p>
+                <div class="buttons">
+                    <a href="https://www.alodokter.com/kepribadian-ganda" class="buy">Informasi Lebih Lanjut</a>
+                </div>
+            </div>
+            
+            <div class="preview" data-target="p-9">
+                <i class="fas fa-times"></i>
+                <img src="images/skizo.png" alt="">
+                <h3>Gangguan kesehatan mental Skizofrenia</h3>
+                <p>Skizofrenia adalah gangguan mental berat yang dapat memengaruhi tingkah laku, emosi, dan komunikasi. Penderita skizofrenia bisa mengalami halusinasi, delusi, kekacauan berpikir, dan perubahan perilaku.</p>
+                <div class="buttons">
+                    <a href="https://www.alodokter.com/skizofrenia" class="buy">Informasi Lebih Lanjut</a>
+                </div>
+            </div>
+            
+            <div class="preview" id="skizoo" data-target="p-10" >
+                <i class="fas fa-times"></i>
+                <img src="images/mood disorder.jpg"alt="">
+                <h3>Gangguan kesehatan mental Afektif</h3>
+                <p> Gangguan afektif atau bipolar adalah gangguan mental yang ditandai dengan perubahan drastis pada suasana hati. Penderita gangguan ini bisa merasa sangat gembira atau euforia, kemudian berubah menjadi sangat sedih.</p>
+                <div class="buttons">
+                    <a href="https://www.alodokter.com/gangguan-bipolar" class="buy">Informasi Lebih Lanjut</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Edukasi -->
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="box-footer">
+                    <div class="box">
+                        <p>&copy; Copyright by <span> Teknik Informatika UHO 2021 </span> All Rights Reserved 2022,
+                            Indonesia</p>
+                    </div>
+                    <div class="box">
+                        <h3>Menu</h3>
+                        <a href="#home">Home</a>
+                        <a href="#anggota">Anggota</a>
+                        <a href="#edukasi">Edukasi</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
